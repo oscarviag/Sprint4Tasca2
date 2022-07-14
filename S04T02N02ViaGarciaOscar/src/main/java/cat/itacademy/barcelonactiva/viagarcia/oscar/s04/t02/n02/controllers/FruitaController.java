@@ -1,4 +1,4 @@
-package cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n01.controllers;
+package cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n02.controllers;
 
 
 import java.util.List;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n01.model.domain.Fruita;
-import cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n01.model.services.Services;
+import cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n02.model.domain.Fruita;
+import cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n02.model.services.Services;
 
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
@@ -34,7 +34,7 @@ public class FruitaController {
 			System.out.println(novaFruita.toString());
 			if (novaFruita.getId()!=0 )
 				
-				return new ResponseEntity<>(novaFruita.toString() + " Afedida a la BD", HttpStatus.CREATED);
+				return new ResponseEntity<>(novaFruita.toString() + "Afegida a la BD\n", HttpStatus.CREATED);
 			
 			else 
 			

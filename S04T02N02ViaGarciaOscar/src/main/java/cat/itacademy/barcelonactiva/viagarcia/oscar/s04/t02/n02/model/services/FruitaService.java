@@ -1,12 +1,12 @@
-package cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n01.model.services;
+package cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n02.model.services;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n01.model.domain.Fruita;
-import cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n01.model.repository.FruitaRepository;
+import cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n02.model.domain.Fruita;
+import cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n02.model.repository.FruitaRepository;
 
 @Service
 public class FruitaService implements Services{
