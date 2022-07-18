@@ -1,24 +1,24 @@
-package cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n01.entity;
+package cat.itacademy.barcelonactiva.viagarcia.oscar.s04.t02.n03.model.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+
+
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.GenerationType;
+import javax.persistence.Transient;
 
-@Entity
-@Table(name="fruita")
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document(collection="fruites")
 public class Fruita {
 	
+	@Transient
+    public static final String SEQUENCE_NAME = "fruita_sequencia";
+	
+
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	
-	@Column(name = "nom")
 	private String nom;
-	
-	@Column(name = "quantitat")
 	private int quantitatQuilos;
 	
 	public Fruita() {}
@@ -27,7 +27,11 @@ public class Fruita {
 		this.nom = nom;
 		this.quantitatQuilos = quantitatQuilos;
 	}
-
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -50,7 +54,7 @@ public class Fruita {
 	
 	@Override
 	public String toString() {
-		return "Fruita [id=" + id + ", nom=" + nom + ", quantitat=" + quantitatQuilos + "]";
+		return "id=" + id + ", nom=" + nom + ", quantitat=" + quantitatQuilos + "\n";
 	}	
 
 }
